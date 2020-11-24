@@ -17,6 +17,8 @@ FROM alpine:3.8
 ENV CRONSPEC "13 * * * *"
 ENV CRONTAB /etc/crontabs/root
 ENV LOGFILE /var/log/app.log
+ENV PROJECT_ID ""
+ENV REGIONS ""
 
 COPY requirements.txt /
 
@@ -32,7 +34,7 @@ COPY gce-quota-sync.py /
 RUN chmod 755 /gce-quota-sync.py
 
 CMD \
-  echo "$CRONSPEC	/gce-quota-sync.py >>$LOGFILE 2>&1" > $CRONTAB && \
+  echo "$CRONSPEC	/gce-quota-sync.py --project ${PROJECT_ID} --gce-regions ${REGIONS} >>$LOGFILE 2>&1" > $CRONTAB && \
   echo "3 0 * * * echo '' >$LOGFILE" >> $CRONTAB && \
   crond -L /var/log/cron.log && \
   touch $LOGFILE && \
