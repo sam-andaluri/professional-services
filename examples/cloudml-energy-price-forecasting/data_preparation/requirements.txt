@@ -1,2 +1,4 @@
 google-cloud-bigquery
-tensorflow==1.10.1
+tensorflow==2.5.1
+numpy>=1.16.3 # not directly required, pinned by Snyk to avoid a vulnerability
+rsa>=4.7 # not directly required, pinned by Snyk to avoid a vulnerability
