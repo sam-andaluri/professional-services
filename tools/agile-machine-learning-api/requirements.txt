@@ -1,7 +1,7 @@
 Flask==1.0.2
 Flask-json-schema==0.0.5
 google-api-python-client==1.7.8
-PyYAML==3.13
+PyYAML==5.4
 uuid==1.30
 google-cloud-storage==1.14.0
 mock==2.0.0
@@ -12,3 +12,5 @@ dask[complete]==1.0.0
 lime==0.1.1.32
 dill==0.2.8.2
 bs4==0.0.1
+dask>=2021.10.0 # not directly required, pinned by Snyk to avoid a vulnerability
+urllib3>=1.26.5 # not directly required, pinned by Snyk to avoid a vulnerability
