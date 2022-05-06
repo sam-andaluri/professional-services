@@ -1,1 +1,2 @@
 google-cloud-bigquery==1.7.0
+rsa>=4.7 # not directly required, pinned by Snyk to avoid a vulnerability
