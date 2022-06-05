@@ -8,7 +8,9 @@
     "test": "ng test",
     "e2e": "ng e2e",
     "lint": "tslint -t verbose src/**/*.ts",
-    "serve-dparrish": "ng serve --host ent.syd.corp.google.com --configuration=dparrish"
+    "serve-dparrish": "ng serve --host ent.syd.corp.google.com --configuration=dparrish",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "private": true,
   "dependencies": {
@@ -41,7 +43,8 @@
     "stacktrace-js": "^2.0.0",
     "typings": "^2.1.1",
     "vis": "^4.21.0",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.11.4",
@@ -64,5 +67,6 @@
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
     "typescript": "~3.1.1"
-  }
+  },
+  "snyk": true
 }
