@@ -19,6 +19,9 @@
 #
 # The following languages are currently supported:
 # - python (using yapf)
+# - golang (using gofmt)
+# - typescript (using npm)
+# - java (using google-java-format 1.7)
 
 # need_formatting - helper function to error out when
 # a folder contains files that need formatting
@@ -43,7 +46,7 @@ validate_bash() {
     # Initialize FILES_TO_LINT to empty string
     FILES_TO_LINT=""
 
-    if [[ ! -z "$FILES_TO_CHECK" ]]
+    if [[ -n "$FILES_TO_CHECK" ]]
     then
         for FILE_TO_CHECK in $FILES_TO_CHECK
         do
@@ -53,7 +56,7 @@ validate_bash() {
             fi
         done
 
-	if [[ ! -z "$FILES_TO_LINT"  ]]
+	if [[ -n "$FILES_TO_LINT"  ]]
 	then
             need_formatting "$FOLDER" "$FILES_TO_LINT"
         fi
@@ -80,7 +83,7 @@ validate_python() {
        need_formatting "$FOLDER"
     fi
 
-    if [[ ! -z "$FILES_TO_CHECK" ]]
+    if [[ -n "$FILES_TO_CHECK" ]]
     then
         # Checking python files
         # python 2 yapf
@@ -91,7 +94,7 @@ validate_python() {
         YAPF_PYTHON2_STATUS=$?
         FILES_TO_LINT+=$( echo "$YAPF_PYTHON2_OUTPUT" | grep -E '^---.*\(original\)$' | awk '{print $2}')
 
-        if [[ ! -z "$FILES_TO_LINT" ]]
+        if [[ -n "$FILES_TO_LINT" ]]
         then
             # Error out with details
             need_formatting "$FOLDER" "$FILES_TO_LINT"
@@ -108,7 +111,7 @@ validate_python() {
                 awk '{print $2}'
             )
 
-            if [[ ! -z "$FILES_TO_LINT" ]]
+            if [[ -n "$FILES_TO_LINT" ]]
             then
                 # Error out with details
                 need_formatting "$FOLDER" "$FILES_TO_LINT"
@@ -133,7 +136,7 @@ validate_go() {
 
     FILES_TO_LINT=$(gofmt -l "$FOLDER")
 
-    if [[ ! -z "$FILES_TO_LINT" ]]
+    if [[ -n "$FILES_TO_LINT" ]]
     then
         # Error out with details
         need_formatting "$FOLDER" "$FILES_TO_LINT"
@@ -150,7 +153,7 @@ validate_typescript(){
 
     FILES_TO_CHECK=$(find "$FOLDER" -type f -name "tsconfig.json")
 
-    if [[ ! -z "$FILES_TO_CHECK" ]]
+    if [[ -n "$FILES_TO_CHECK" ]]
     then
         for tsconfig_path in $FILES_TO_CHECK
         do
@@ -189,7 +192,7 @@ validate_java(){
     # Initialize FILES_TO_LINT to empty string
     FILES_TO_LINT=""
 
-    if [[ ! -z "$FILES_TO_CHECK" ]]
+    if [[ -n "$FILES_TO_CHECK" ]]
     then
         echo "Testing formatting for java files in $FOLDER"
 
@@ -200,7 +203,7 @@ validate_java(){
                 -n $FILES_TO_CHECK
         )
 
-        if [[ ! -z "$FILES_TO_LINT" ]]
+        if [[ -n "$FILES_TO_LINT" ]]
         then
             need_formatting "$FOLDER" "$FILES_TO_LINT"
         fi

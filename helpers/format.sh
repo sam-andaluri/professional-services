@@ -22,6 +22,9 @@
 #
 # The following languages are currently supported:
 # - python (using yapf)
+# - golang (using gofmt)
+# - typescript (using npm)
+# - java (using google-java-format 1.7)
 
 # temporary list of folders to exclude
 EXCLUDE_FOLDERS=$(cat helpers/exclusion_list.txt)
@@ -35,7 +38,7 @@ do
         echo "Formatting python files (if any)"
 
         FILES_TO_FORMAT=$(find "$FOLDER" -type f -name "*.py")
-        if [[ ! -z "$FILES_TO_FORMAT" ]]
+        if [[ -n "$FILES_TO_FORMAT" ]]
         then
             # format all python files in place for python2
 
@@ -69,10 +72,12 @@ do
         echo "Formatting java files (if any)"
 
         FILES_TO_FORMAT=$(find "$FOLDER" -type f -name "*.java")
-        if [[ ! -z "$FILES_TO_FORMAT" ]]
+        # write the list to a temporary files which will be the input to google-java-format
+        echo "$FILES_TO_FORMAT" > /tmp/file.txt
+        if [[ -n "$FILES_TO_FORMAT" ]]
         then
             # format all java files in place
-            java -jar /usr/share/java/google-java-format-1.7-all-deps.jar -i "$FILES_TO_FORMAT"
+            java -jar /usr/share/java/google-java-format-1.7-all-deps.jar -i @/tmp/file.txt
         else
             echo "No java files found for $FOLDER - SKIP"
         fi
