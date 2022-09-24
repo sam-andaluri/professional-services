@@ -4,3 +4,4 @@ numpy
 pandas
 Flask==0.12.2
 
+protobuf>=3.18.3 # not directly required, pinned by Snyk to avoid a vulnerability
