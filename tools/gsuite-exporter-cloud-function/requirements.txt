@@ -1,1 +1,3 @@
 gsuite-exporter==0.0.3
+protobuf>=3.18.3 # not directly required, pinned by Snyk to avoid a vulnerability
+rsa>=4.7 # not directly required, pinned by Snyk to avoid a vulnerability
