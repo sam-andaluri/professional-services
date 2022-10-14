@@ -5,3 +5,5 @@ matplotlib
 sklearn
 numpy
 scipy
+httplib2>=0.19.0 # not directly required, pinned by Snyk to avoid a vulnerability
+pyyaml>=5.4 # not directly required, pinned by Snyk to avoid a vulnerability
