@@ -1,2 +1,4 @@
 google-api-python-client
 google-cloud-asset
+protobuf>=3.18.3 # not directly required, pinned by Snyk to avoid a vulnerability
+rsa>=4.7 # not directly required, pinned by Snyk to avoid a vulnerability
