@@ -1,2 +1,4 @@
 google-cloud-bigquery
 tensorflow==1.10.1
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
+wheel>=0.38.0 # not directly required, pinned by Snyk to avoid a vulnerability
