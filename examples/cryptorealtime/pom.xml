@@ -9,7 +9,7 @@
 
     <properties>
         <beam.version>2.8.0</beam.version>
-        <bigtable.version>1.5.0</bigtable.version>
+        <bigtable.version>1.6.0</bigtable.version>
         <slf4j.version>1.7.21</slf4j.version>
         <bitrich.xchange-stream.version>4.3.11</bitrich.xchange-stream.version>
         <bigtable.table>cryptorealtime</bigtable.table>
