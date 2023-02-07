@@ -6,7 +6,7 @@ cachetools==4.2.2
 certifi==2021.5.30
 click==7.1.2
 crcmod==1.7
-cryptography==2.6.1
+cryptography==39.0.1
 distro-info==0.21
 entrypoints==0.3
 Flask==1.1.4
