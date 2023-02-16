@@ -8,5 +8,5 @@ httplib2==0.12.0
 google-apitools==0.5.28
 google-api-core==1.14.3
 Flask==1.1.1
-Werkzeug==0.16.0
+Werkzeug==2.2.3
 PyYAML==3.13
