@@ -1,4 +1,4 @@
-Flask==1.0.2
+Flask==2.2.5
 Flask-json-schema==0.0.5
 google-api-python-client==1.7.8
 PyYAML==3.13
