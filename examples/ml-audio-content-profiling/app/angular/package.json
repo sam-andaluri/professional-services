@@ -12,9 +12,10 @@
     "clean": "gts clean",
     "compile": "tsc -p .",
     "fix": "gts fix",
-    "prepare": "npm run compile",
+    "prepare": "npm run snyk-protect && npm run compile",
     "pretest": "npm run compile",
-    "posttest": "npm run check"
+    "posttest": "npm run check",
+    "snyk-protect": "snyk-protect"
   },
   "private": true,
   "dependencies": {
@@ -49,7 +50,8 @@
     "react-dom": "^16.8.6",
     "rxjs": "~6.3.3",
     "simplebar": "^4.0.0-alpha.9",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.10.0",
@@ -72,5 +74,6 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "^3.1.2"
-  }
+  },
+  "snyk": true
 }
