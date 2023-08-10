@@ -24,7 +24,7 @@ google-cloud-storage==1.13.2
 google-resumable-media==0.3.2  # via google-cloud-storage
 googleapis-common-protos[grpc]==1.5.5  # via google-api-core, grpc-google-iam-v1
 grpc-google-iam-v1==0.11.4  # via google-cloud-pubsub
-grpcio==1.17.1            # via google-api-core, googleapis-common-protos, grpc-google-iam-v1
+grpcio==1.53.2            # via google-api-core, googleapis-common-protos, grpc-google-iam-v1
 httplib2==0.12.0          # via google-api-python-client, google-auth-httplib2, oauth2client
 idna==2.8                 # via requests
 ipaddress==1.0.22         # via faker
