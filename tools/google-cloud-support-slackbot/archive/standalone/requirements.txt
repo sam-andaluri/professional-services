@@ -47,7 +47,7 @@ slackeventsapi==2.2.1
 typing-extensions==3.10.0.0
 unattended-upgrades==0.1
 uritemplate==3.0.1
-urllib3==1.26.6
+urllib3==1.26.17
 Werkzeug==1.0.1
 yarl==1.6.3
 zipp==3.4.1
