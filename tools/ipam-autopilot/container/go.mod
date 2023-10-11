@@ -23,8 +23,7 @@ require (
 	github.com/jackc/pgx/v4 v4.13.0 // indirect
 	github.com/stretchr/testify v1.7.0
 	go.uber.org/atomic v1.9.0 // indirect
-	golang.org/x/net v0.0.0-20211208012354-db4efeb81f4b // indirect
-	golang.org/x/sys v0.0.0-20211205182925-97ca703d548d // indirect
+	golang.org/x/net v0.17.0 // indirect
 	google.golang.org/api v0.61.0
 	google.golang.org/genproto v0.0.0-20211207154714-918901c715cf
 	google.golang.org/grpc v1.42.0 // indirect
