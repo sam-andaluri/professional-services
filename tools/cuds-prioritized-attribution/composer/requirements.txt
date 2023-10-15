@@ -4,3 +4,4 @@ google-cloud-storage==1.19.0
 pytest==5.1.2
 werkzeug==0.15.4
 configparser==5.0.0
+apache-airflow>=2.7.2 # not directly required, pinned by Snyk to avoid a vulnerability
