@@ -43,5 +43,5 @@ rsa==4.0                  # via google-auth, oauth2client
 six==1.12.0               # via faker, google-api-core, google-api-python-client, google-auth, google-resumable-media, grpcio, mock, oauth2client, protobuf, python-dateutil, retrying
 text-unidecode==1.2       # via faker
 uritemplate==3.0.0        # via google-api-python-client
-urllib3==1.24.1           # via requests
+urllib3==1.26.5           # via requests
 yaspin==0.14.0
