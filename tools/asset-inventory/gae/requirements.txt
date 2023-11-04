@@ -9,4 +9,4 @@ google-apitools==0.5.28
 google-api-core==1.14.3
 Flask==1.1.1
 Werkzeug==0.16.0
-PyYAML==3.13
+PyYAML==5.4
