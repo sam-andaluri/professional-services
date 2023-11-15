@@ -3,3 +3,4 @@ apache-beam[gcp]==2.19.0
 werkzeug==0.15.4
 tzlocal>=1.5.1
 pyspark==2.4.0
+apache-airflow>=2.7.3 # not directly required, pinned by Snyk to avoid a vulnerability
