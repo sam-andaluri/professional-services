@@ -8,10 +8,10 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <beam.version>2.8.0</beam.version>
+        <beam.version>2.26.0</beam.version>
         <bigtable.version>1.5.0</bigtable.version>
         <slf4j.version>1.7.21</slf4j.version>
-        <bitrich.xchange-stream.version>4.3.11</bitrich.xchange-stream.version>
+        <bitrich.xchange-stream.version>4.4.1</bitrich.xchange-stream.version>
         <bigtable.table>cryptorealtime</bigtable.table>
         <bigtable.hbase.version>${bigtable.version}</bigtable.hbase.version>
         <maven.compiler.target>1.7</maven.compiler.target>
