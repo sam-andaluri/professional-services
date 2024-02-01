@@ -8,7 +8,7 @@ COPY main.go .
 RUN go get -v ./
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o /gcs2bq .
 
-FROM google/cloud-sdk:slim
+FROM google/cloud-sdk:462.0.0-slim
 WORKDIR /
 RUN chown -R 1000 /home
 COPY --from=0 /gcs2bq .
