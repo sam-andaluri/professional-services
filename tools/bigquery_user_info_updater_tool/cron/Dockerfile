@@ -1,4 +1,4 @@
-FROM python:3.6-slim
+FROM python:3.8.18-slim
 RUN mkdir -p ~/.kube && apt-get update && apt-get install -y curl && pip install --upgrade kubernetes
 RUN curl -sSL https://sdk.cloud.google.com | bash
 RUN pip install --upgrade google-cloud-bigquery
