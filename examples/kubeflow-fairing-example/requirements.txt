@@ -5,3 +5,5 @@ xgboost
 sklearn
 seldon-core
 tensorflow
+gunicorn>=22.0.0 # not directly required, pinned by Snyk to avoid a vulnerability
+keras>=2.13.1rc0 # not directly required, pinned by Snyk to avoid a vulnerability
