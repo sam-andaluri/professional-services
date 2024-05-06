@@ -6,3 +6,4 @@ cloudml-hypertune
 scikit-plot
 tensorflow
 google-api-python-client
+werkzeug>=3.0.3 # not directly required, pinned by Snyk to avoid a vulnerability
