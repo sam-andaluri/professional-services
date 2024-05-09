@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM python:3.8-slim
+FROM python:3.13.0b1-slim
 
 # Allow statements and log messages to immediately appear
 ENV PYTHONUNBUFFERED True
