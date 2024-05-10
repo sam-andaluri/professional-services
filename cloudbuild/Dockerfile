@@ -2,7 +2,7 @@
 # To push a new image, run 'gcloud builds submit --project=cloud-eng-council --tag gcr.io/cloud-eng-council/make .'
 # from this directory.
 
-FROM python:3.8-slim
+FROM python:3.13.0b1-slim
 
 # install core tools
 RUN apt-get update && apt-get install -y build-essential
