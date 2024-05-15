@@ -10,7 +10,7 @@
 # distributed under the License is distributed on an "AS IS" BASIS,
 
 
-FROM python:3.7
+FROM python:3.10.14
 
 COPY requirements.txt ./
 RUN pip3 install --no-cache-dir -r requirements.txt
