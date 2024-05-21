@@ -1,3 +1,4 @@
 google-api-python-client==1.7.9
 python-json-logger==0.1.11
 google-cloud-logging==1.11.0
+requests>=2.32.0 # not directly required, pinned by Snyk to avoid a vulnerability
