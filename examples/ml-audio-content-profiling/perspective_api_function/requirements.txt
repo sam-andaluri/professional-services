@@ -2,3 +2,4 @@ google-auth==1.6.3
 google-api-python-client==1.7.11
 google-cloud-storage==1.18.0
 google-cloud-monitoring==0.33.0
+urllib3>=2.2.2 # not directly required, pinned by Snyk to avoid a vulnerability
