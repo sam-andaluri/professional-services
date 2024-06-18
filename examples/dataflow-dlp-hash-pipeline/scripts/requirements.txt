@@ -6,3 +6,4 @@ google-api-core==1.17.0
 google-cloud-pubsub==1.0.2
 google-cloud-secret-manager==0.2.0
 progress==1.5
+urllib3>=2.2.2 # not directly required, pinned by Snyk to avoid a vulnerability
