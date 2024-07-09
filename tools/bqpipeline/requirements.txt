@@ -1,3 +1,4 @@
 google-cloud-bigquery>=1.9.0
 Jinja2>=2.10
 futures==3.2.0; python_version == "3"
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
