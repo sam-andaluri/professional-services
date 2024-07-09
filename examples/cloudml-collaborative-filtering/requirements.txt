@@ -9,3 +9,4 @@ pyarrow==0.15.0
 tensorboard==1.15.0
 tensorflow>=0.15.0,<2.0.0
 tensorflow-transform==0.21.2
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
